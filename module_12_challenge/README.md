@@ -2,7 +2,7 @@
 
 ## Overview of the Analysis
 
-The purpose of this analysis is to develop a machine learning model to predict outcomes of high risk loans. Credit risk poses a classification problem that’s inherently imbalanced. This is because healthy loans easily outnumber risky loans in credit risk loan populations. This project uses various techniques to train and evaluate models with imbalanced classes. 
+The purpose of this analysis is to develop a machine learning model to predict likely outcomes of high risk loans. Credit risk poses a classification problem that’s inherently imbalanced. This is because healthy loans easily outnumber risky loans in credit risk loan populations. This project uses various techniques to train and evaluate models with imbalanced classes. 
 The original dataset contains historical lending activity from a peer-to-peer lending services companies. Using this data we then use machine learning models to predict if a grouping of financial characteristics will result in a healthy or unhealthy loan.
 
 The dataset consists of seven columns of borrowers financial history:
@@ -58,7 +58,7 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
 
 ## Summary
 
-In order to recommend a model it is necessary to indetify which metric is most critical then to optimize the model to that metric. With credit risk data being by nature an imbalanced class it is important to resample data using an oversampling techinique in order to increase the minority class to have more samples of test data for the model. 
+In order to recommend a model it is necessary to identify which metric is most critical then to optimize the model to that metric. With credit risk data being by nature an imbalanced class it is important to resample data using an oversampling techinique in order to increase the minority class to have more samples of test data for the model. 
 
 A high accuracy score is not very relavent to our dataset since a high accuracy score merely reflects how many healthy loans exist in the original dataset. What is needed is to detemine if there is a higher cost associated with a false negative (recall metric) or a false positive (precision metric). With a false negative you will miss problems loans and score them as good loans thus increasing in error the total number of loans that are bound to default. With a false positive you simply mischaracterize good loans as ones likely to default. The latter has no risks of financial loss to the the lender. 
 
