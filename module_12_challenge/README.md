@@ -1,34 +1,74 @@
-# Module 12 Report Template
+# Module 12 Report
 
 ## Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
+The purpose of this analysis is to develop a machine learning model to predict outcomes of high risk loans. Credit risk poses a classification problem that’s inherently imbalanced. This is because healthy loans easily outnumber risky loans in credit risk loan populations. This project uses various techniques to train and evaluate models with imbalanced classes. 
+The original dataset contains historical lending activity from a peer-to-peer lending services companies. Using this data we then use machine learning models to predict if a grouping of financial characteristics will result in a healthy or unhealthy loan.
 
-DONT FORGET TO UPDATE THIS
+The dataset consists of seven columns of borrowers financial history:
+* Loan size
+* Interest rate
+* Borrower Income
+* Debt to income 
+* Number of accounts
+* Derogatory marks
+* Total debt
 
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
+The target variable is loan status and contains a value of 1 when the loan is healthy and a 0 when the loan has a high risk of defaulting.
+
+
+The loan status breakdown of the original data is:
+* 75,036 loans labeled healthy (1)
+* 2,500 loans labled unhealthy (0)
+
+
+The following Machine Learning process were used:
+* Split the data into training and testing datasets
+* Created a Logistic Regression model (of categorical data) with the original data
+* Fit the model to the testing data
+* Evaluated the model using accuracy score, confusion matrix and a classification report. 
+* Oversample the dataset then train model fit predict.
+* Evaluate the model and compare metrics to determine which model is most effective for dataset.
+
 
 ## Results
 
 Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
 
 * Machine Learning Model 1:
-  * Description of Model 1 Accuracy, Precision, and Recall scores.
+  Balance Accuracy: 95%
+  Precision:
+      Healthy Loans - 1.00
+      Unhealthy Loans - 0.85
+  Recall:
+      Healthy Loans - 0.99
+      Unhealthy Loans - 0.91
 
 
 
 * Machine Learning Model 2:
-  * Description of Model 2 Accuracy, Precision, and Recall scores.
+  Balance Accuracy: 99%
+  Precision:
+      Healthy Loans - 1.00
+      Unhealthy Loans - 0.84
+  Recall:
+      Healthy Loans - 0.99
+      Unhealthy Loans - 0.99
+  
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+In order to recommend a model it is necessary to indetify which metric is most critical then to optimize the model to that metric. With credit risk data being by nature an imbalanced class it is important to resample data using an oversampling techinique in order to increase the minority class to have more samples of test data for the model. 
 
-If you do not recommend any of the models, please justify your reasoning.
+A high accuracy score is not very relavent to our dataset since a high accuracy score merely reflects how many healthy loans exist in the original dataset. What is needed is to detemine if there is a higher cost associated with a false negative (recall metric) or a false positive (precision metric). With a false negative you will miss problems loans and score them as good loans thus increasing in error the total number of loans that are bound to default. With a false positive you simply mischaracterize good loans as ones likely to default. The latter has no risks of financial loss to the the lender. 
+
+For this reason the second machine learning model using oversampled data with a higher recall score is the more useful model to determine which loans are most likely to default. Remember that the recall metric reveals how effectively a model correctly predicted the instances of a class versus the total number of instances that belong to that class. The second model increases recall by 8% and is better at identifying true unhealthy loans.
+
+
+
+
+ 
+
+
+
 
