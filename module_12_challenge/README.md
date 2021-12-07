@@ -24,7 +24,7 @@ The loan status breakdown of the original data is:
 
 The following Machine Learning process were used:
 * Split the data into training and testing datasets
-* Created a Logistic Regression model (of categorical data) with the original data
+* Created a Logistic Regression model with the original data
 * Fit the model to the testing data
 * Evaluated the model using accuracy score, confusion matrix and a classification report. 
 * Oversample the dataset then train model fit predict.
