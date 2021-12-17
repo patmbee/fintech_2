@@ -5,6 +5,11 @@ We have created a model that predicts whether applicants will be successful afte
 
 The raw data is CSV containing more than 34,000 organizations that have received funding from our team over the years. The project utilizes the features in the provided dataset to create a binary classifier model that will predict whether an applicant will become a successful business. The CSV file contains a variety of information about these businesses, including whether or not they ultimately became successful.
 
+Main project with first three models is named 'venture_funding_with_deep_learning.ipynb'. Second file named venture_funding_with_deep_learning_dropFeatures.ipynb contains a single model with fewer features.
+
+All models are saved in the Resources folder. 
+
+
 ## Steps taken in Project
 * Prepare the data for use on a neural network model.
 
