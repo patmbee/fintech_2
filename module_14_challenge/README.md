@@ -14,25 +14,20 @@ To do so we have:
 * Create an Evaluation Report
 
 - - - 
-### Results
-## Baseline Model
-Baseline Model Performance
-Tuning SMA and Training Duration Windows
-Short SMA - 4 Days,  Long SMA Window - 100 Days, DateOffSet - 3 months
+## Results
+### Baseline Model
+* Short SMA - 4 Days,  Long SMA Window - 100 Days, DateOffSet - 3 months
 
-![alt text](./Resources/baselineModel_ClassificationReport.png)
+### Tuned Model
+* Short SMA - 50 Days,  Long SMA Window - 200 Days, DateOffSet - 6 months
+
+![alt text](./Resources/lrModel_plot.png)
+![alt text](./Resources/tunedplot.png)
 ![alt text](./Resources/baselineModel_plot.png)
 
-Tuned Baseline Performance
-Tuning SMA and Training Duration Windows
-Short SMA - 50 Days,  Long SMA Window - 200 Days, DateOffSet - 6 months
-![alt text](./Resources/baseline_model_tuned_report.png)
-![alt text](./Resources/tunedplot.png)
+### Classfication Report Comparison
+![alt text](./Resources/Reports.png)
 
-New Logistic Regression Linear Classifier
-Classification Report
-![alt text](./Resources/lr_report.png)
-![alt text](./Resources/lrModel_plot.png)
 
 Question 1: 
 The Recall score for the baseline model is very low and the strategy performance significantly underperforms the actual returns.
