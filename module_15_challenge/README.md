@@ -12,10 +12,11 @@ In this project a RoboAdvisor was created to recommend investments to users duri
 ## Results
 
 ### RoboAdvisor test
-
+![alt text](./Images/RoboAdvisorImage.png)
 
 ### RoboAdvisor enhanced with Lambda Function
-
+![alt text](./Images/Lambda_1.png)
+![alt text](./Images/Lambda_2.png)
 
 ## Contributors
 This is a student project 
