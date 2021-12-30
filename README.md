@@ -1,5 +1,5 @@
 
-# Repo contains Machine Learning Projects
+# Repo of various machine learning projects
 - - - 
 ## Table of Contents
 
